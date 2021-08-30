@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/Android3_2/app/src/main/res/drawable/spinner_ring.xml" value="0.2518518518518518" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Android3_2/app/src/main/res/layout/activity_details.xml" value="0.2604166666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Android3_2/app/src/main/res/layout/activity_favorites.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Android3_2/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Android3_2/app/src/main/res/layout/item.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Android3_2/app/src/main/res/layout/item_favorites.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>

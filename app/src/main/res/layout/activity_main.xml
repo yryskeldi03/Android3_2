@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ui.MainActivity">
+    tools:context=".ui.ui.main.MainActivity"
+    android:orientation="vertical">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/anim"
@@ -14,9 +15,20 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_favorites"
+        android:text="Избранное"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/black"
+        android:layout_gravity="end"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_main"
         android:layout_width="match_parent"
+        tools:listitem="@layout/item"
         android:layout_height="match_parent"
+        android:layout_gravity=""
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-</FrameLayout>
+</LinearLayout>

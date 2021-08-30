@@ -13,10 +13,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.ViewHolder> {
-    private List<Film> list = new LinkedList<>();
+    private List<Film> list;
     private OnItemClickListener onItemClickListener;
 
     public void setList(List<Film> list) {
+        this.list = new LinkedList<>();
         this.list = list;
         notifyDataSetChanged();
     }
@@ -51,12 +52,17 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.ViewHolder> {
         public void onBind(Film film) {
             binding.tvDate.setText(film.getReleaseDate());
             binding.tvTitle.setText(film.getTitle());
+            itemView.setOnClickListener(v -> onItemClickListener.onItemClick(film.getId()));
 
-            itemView.setOnClickListener(v -> onItemClickListener.onClick(film.getId()));
+            binding.btnSave.setOnClickListener(v -> {
+                onItemClickListener.onBtnClick(film.getId(), getAdapterPosition());
+            });
         }
     }
 
     public interface OnItemClickListener{
-        void onClick(String id);
+        void onItemClick(String id);
+
+        void onBtnClick(String id, int position);
     }
 }
